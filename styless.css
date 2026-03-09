@@ -138,27 +138,7 @@ section h2 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
 
-    body {
-        padding-top: 80px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    .producto {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .zoom-container img {
-        max-width: 260px;
-    }
 
     #lupa {
         display: none; /* desactiva zoom en celular */
@@ -172,7 +152,7 @@ section h2 {
         font-size: 20px;
     }
 
-}
+
 
 .beneficios-lista {
     list-style: none;
@@ -258,4 +238,27 @@ section h2 {
 
 .zoom-container:hover #lupa{
 transform: scale(1);
+}
+
+/* VERSION CELULAR */
+@media (max-width: 768px) {
+
+    .producto{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .zoom-container{
+        width: 100%;
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .zoom-container img{
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
