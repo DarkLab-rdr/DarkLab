@@ -6,8 +6,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #332e36;
-    background: linear-gradient(90deg,rgba(51, 46, 54, 1) 71%, 
-    rgba(161, 145, 145, 1) 100%, rgba(252, 176, 69, 1) 100%);
+    background: #332e36;
+    background: linear-gradient(180deg, #2f2f33, #3a3a40);
     color: white;
     padding-top: 90px;
 }
