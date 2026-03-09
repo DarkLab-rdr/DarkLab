@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="img/icono creatina.png">
 <link rel="stylesheet" href="styless.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
@@ -14,18 +15,18 @@
     <h1>Creatina Monohidratada Dark Lab</h1>
 </header>
 
-<section class="producto">
+<section class="producto" data-aos="zoom-in">
 
     <div class="imagen-container">
         <div class="zoom-container">
-            <img id="imagenPrincipal" src="img/creatina dark lab.webp" alt="Creatina">
+            <img id="imagenPrincipal" src="img/creatina-removebg-preview.png" alt="Creatina">
             <div id="lupa"></div>
         </div>
     </div>
 
     <div class="info">
         <h2>Creatina Monohidratada 300g</h2>
-        <p class="precio">$26.000</p>
+        <p class="precio">$22.000</p>
 
         <ul class="beneficios-cortos">
             <li>✔ Mayor energía muscular</li>
@@ -35,7 +36,7 @@
         </ul>
 
         <a href="https://wa.me/5493757657227?text=Hola%2C%20quiero%20comprar%20una%20creatina." target="_blank">
-            <button class="boton-whatsapp">Comprar por Whatsapp</button>
+            <button class="boton-whatsapp">🔥Comprar Ahora</button>
         </a>
     </div>
 
@@ -67,7 +68,8 @@
     <br>
 
     <h2>Descubre los poderosos beneficios de la Creatina Dark Lab</h2>
-    <ul class="beneficios-lista">
+
+    <ul class="beneficios-lista" data-aos="fade-right">
         <li>Mejora el rendimiento físico</li>
         <li>Aumento de la fuerza muscular </li>
         <li>Aumento del volumen muscular</li>
@@ -107,10 +109,60 @@
 </ul>
 </section>
 
+<!--TABLA-->
+
+<section class="nutricion" data-aos="fade-up">
+    <h2>Información Nutricional</h2>
+
+    <p class="porciones">
+        Porciones por envase: 100 | Tamaño de la porción: 3 g
+    </p>
+
+    <table class="tabla-nutricional">
+
+        <tr>
+            <th>Nutriente</th>
+            <th>Por porción</th>
+            <th>% VD*</th>
+        </tr>
+
+        <tr>
+            <td>Creatina</td>
+            <td>3000 mg (3g)</td>
+            <td>-</td>
+        </tr>
+
+    </table>
+
+    <p class="nota">
+        No contiene cantidades significativas de valor energético, carbohidratos, azúcare totales,
+        azúcares totales, azúcares añadidos, proteínas, grasas totales, grasas saturadas, grasas trans,
+        fibra dietética ni sodio.
+    </p>
+
+    <p class="ingredientes">
+        <strong>Ingredientes:</strong> Creatina Monohidratada.
+        <strong>Sin gluten.</strong><br>
+        <strong>Advertencia:</strong> elaborado en una planta que procesa leche, huevo, cacahuetes y soja.
+    </p></section>
+
+
+
+
 <footer class="footer">
     <p><p>© <span id="anio"></span> Creatina Dark Lab. Todos los derechos reservados.</p> </p>
 </footer>
 
-<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration: 1000,
+once: true
+});
+</script>
+
+
+</script>
 </body>
 </html>

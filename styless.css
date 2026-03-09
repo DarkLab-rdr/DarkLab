@@ -37,17 +37,25 @@ header.scrolled {
 
 /* PRODUCTO */
 .producto {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 60px 40px;
     align-items: center;
 }
 
+
 .imagen-container {
     text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.imagen-container img:hover{
+transform: scale(1.1);
 }
 
 .zoom-container {
@@ -55,15 +63,18 @@ header.scrolled {
     display: inline-block;
 }
 
+
+
 .zoom-container img {
     width: 100%;
-    max-width: 380px;
-    border-radius: 10px;
-    display: block;
+    max-width: 500px;
+    display: flex;
 }
 
 #lupa {
     position: absolute;
+    transform: scale(0.9);
+    transition: opacity 0.2s ease, transform 0.2s ease;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -71,6 +82,11 @@ header.scrolled {
     opacity: 0;
     transition: opacity 0.2s ease;
     pointer-events: none;
+    background-color: white;   /* esto ayuda cuando la imagen es transparente */
+    background-repeat: no-repeat;
+
+    z-index: 10;
+    transition: opacity 0.2s ease;
 }
 
 .info {
@@ -84,19 +100,29 @@ header.scrolled {
 }
 
 .boton-whatsapp {
-    padding: 15px 25px;
-    background-color: #25D366;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
-    color: white;
+background:#25D366;
+color:white;
+border:none;
+padding:16px 28px;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+animation: latido 2s infinite;
+transition:0.3s;
+box-shadow:0 6px 15px rgba(0,0,0,0.4);
 }
 
 .boton-whatsapp:hover {
     background-color: #1ebe5d;
+    transform: scale(1.07);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+@keyframes latido{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
 }
 
 /* SECCIONES */
@@ -181,4 +207,55 @@ section h2 {
 
 .footer p {
     margin: 0;
+}
+
+.nutricion {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.tabla-nutricional {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(42,42,46,0.6);
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+.tabla-nutricional th {
+    background: rgb(221, 57, 57);
+    padding: 15px;
+}
+
+.tabla-nutricional td {
+    padding: 15px;
+    border-bottom: 1px solid #3a3a40;
+    text-align: center;
+}
+
+.tabla-nutricional tr:nth-child(even){
+    background: rgba(255,255,255,0.03);
+}
+
+.porciones {
+    margin-top:10px;
+    color:#ccc;
+}
+
+.nota {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+.ingredientes {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+.zoom-container:hover #lupa{
+transform: scale(1);
 }

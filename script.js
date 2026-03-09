@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // HEADER SCROLL
     window.addEventListener("scroll", function () {
         const header = document.getElementById("header");
+
         if (window.scrollY > 50) {
             header.classList.add("scrolled");
         } else {
@@ -10,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Solo activar zoom en desktop
+
+    // SOLO ACTIVAR ZOOM EN DESKTOP
     if (window.innerWidth > 768) {
 
         const img = document.getElementById("imagenPrincipal");
@@ -18,11 +20,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (img && lupa) {
 
-            lupa.style.backgroundImage = "url('" + img.src + "')";
-            lupa.style.backgroundRepeat = "no-repeat";
-            lupa.style.backgroundSize = (img.width * 2) + "px " + (img.height * 2) + "px";
+            function configurarZoom() {
 
-            img.addEventListener("mousemove", function(e) {
+                const rect = img.getBoundingClientRect();
+
+                lupa.style.backgroundImage = "url('" + img.src + "')";
+                lupa.style.backgroundRepeat = "no-repeat";
+                lupa.style.backgroundSize =
+                    (rect.width * 2) + "px " + (rect.height * 2) + "px";
+            }
+
+            // recalcular cuando cargue la imagen
+            img.addEventListener("load", configurarZoom);
+
+            // por si la imagen ya está cargada
+            configurarZoom();
+
+
+            img.addEventListener("mousemove", function (e) {
 
                 const rect = img.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -37,12 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     (y * 2 - 60) + "px";
             });
 
-            img.addEventListener("mouseleave", function() {
+
+            img.addEventListener("mouseleave", function () {
                 lupa.style.opacity = "0";
             });
         }
     }
 
 });
-
-document.getElementById("anio").textContent = new Date().getFullYear();
