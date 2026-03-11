@@ -308,3 +308,68 @@ transform: scale(1);
     border-radius: 6px;
     cursor: pointer;
 }
+
+.opiniones {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.titulo-opiniones {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sub-opiniones {
+    color: #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #32ff00;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.opiniones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+   max-width: 1100px;
+   margin: auto;
+}
+
+.opinion {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.opinion:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.opinion p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.opinion span {
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media (max-width:768px){
+
+.opiniones-grid{
+grid-template-columns: 1fr 1fr;
+}
+
+}
