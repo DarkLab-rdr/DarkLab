@@ -368,6 +368,141 @@ transform:translateY(-5px);
     font-size: 13px;
     color: #aaa;
 }
+/* =========================
+   SHAKER DARK LAB
+========================= */
+
+.shaker{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 10%;
+    background: linear-gradient(180deg,#0d0d0d, #161616);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.shaker .imagen-container{
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.shaker .imagen-container img:hover{
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.shaker .info{
+    flex:1;
+    min-width: 320px;
+}
+
+.mini-frase{
+    display: inline-block;
+    background: #ff003c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255,0,60,0.4);
+}
+
+.descripcion-producto{
+    color: #cfcfcf;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.shaker .precio{
+    font-size: 42px;
+    color: #00ff88;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(0,255,136,0.3);
+}
+
+.shaker h3{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.beneficios-cortos,
+.precauciones{
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios-cortos li,
+.precauciones li{
+    margin-bottom: 12px;
+    color: #d7d7d7;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.beneficios-cortos li:hover,
+.precauciones li:hover{
+    transform: translateX(6px);
+    color: white;
+}
+
+.uso-producto{
+    color: #d0d0d0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.shaker .boton-whatsapp{
+    margin-top: 25px;
+    background: linear-gradient(135deg, #ff003c, #ff4d6d);
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255,0,60,0.3);
+}
+
+.shaker .boton-whatsapp:hover{
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(255,0,60,0.6);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 900px){
+
+    .shaker{
+        padding: 60px 25px;
+        gap: 30px;
+    }
+
+    .shaker h2{
+        font-size: 32px;
+    }
+
+    .shaker .precio{
+        font-size: 34px;
+    }
+
+    .descripcion-producto{
+        font-size: 15px;
+    }
+
+}
+
 
 @media (max-width:768px){
 
